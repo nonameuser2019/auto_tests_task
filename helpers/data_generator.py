@@ -14,4 +14,4 @@ class DataGenerator:
 
     @property
     def get_password(self):
-        return ''.join(random.choice(self.lower_letters + self.upper_letters + self.digits) for _ in range(10))
+        return ''.join(random.choice(self.lower_letters + self.upper_letters + self.digits) for _ in range(18))

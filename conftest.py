@@ -14,7 +14,6 @@ def browser(request):
     if browser_name == 'chrome':
         print(' \nStart browser chrome for test')
         options = Options()
-        #options.headless = True
         driver = webdriver.Chrome(options=options)
         driver.maximize_window()
         driver.implicitly_wait(5)

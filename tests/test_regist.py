@@ -1,5 +1,6 @@
 from pages.code_auth_page import CodeAuthPage
 from helpers.data_generator import DataGenerator
+import pytest
 
 
 class TestRegistration:
@@ -13,6 +14,7 @@ class TestRegistration:
         register_page = pass_auth_page.click_register_link()
         return register_page
 
+    @pytest.mark.xfail(reason="Не корректное название кнопки 'Продолжить'")
     def test_check_fields_on_register_page(self, browser):
         register_page = self.register_page(browser)
         register_page.check_register_form_field()

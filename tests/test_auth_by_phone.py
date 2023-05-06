@@ -1,4 +1,5 @@
 from pages.code_auth_page import CodeAuthPage
+import pytest
 
 
 class TestAuthByPhone:
@@ -11,6 +12,7 @@ class TestAuthByPhone:
         pass_auth_page = code_auth_page.click_on_enter_with_password_btn()
         return pass_auth_page
 
+    @pytest.mark.xfail(reason="Редирект после логина на не правильную страницу")
     def test_auth_by_phone(self, browser):
         auth_page = self.auth_page(browser)
         auth_page.user_name_input().send_keys(self.phone)
