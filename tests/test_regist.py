@@ -1,4 +1,3 @@
-from pages.base_page import BasePage
 from pages.code_auth_page import CodeAuthPage
 from helpers.data_generator import DataGenerator
 
